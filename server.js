@@ -6,8 +6,14 @@ var express = require('express');
 var app = express();
 
 // 3.  Define Functiosn to run when someone accesses our site
-app.get('/', function(req, res){
-    res.send('Hello World');
+app.get('/', function(req, res)
+{
+    res.sendFile(__dirname + '\frontend\html\index.html');
+})
+
+app.get('/resume', function(req, res)
+{
+    res.sendFile(__dirname + '\frontend\html\index.html');
 })
 
 // 4. Run Application on a port ==> 65xxx (65K ports) Mostly we use beyone 3000
